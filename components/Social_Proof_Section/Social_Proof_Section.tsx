@@ -9,21 +9,19 @@ export default function Social_Proof_Section() {
     <div
       className={`${spartan.className} max-w-[1120px] mx-auto px-4 py-20 overflow-hidden`}
     >
-      <div className="grid gap-y-12 lg:grid-cols-2 lg:gap-x-[30px] items-start">
-        {/* Left side - Heading and description */}
+      <div className="grid gap-y-12 lg:grid-cols-2 lg:gap-x-8 items-center">
         <div className="max-w-[445px]">
-          <h1 className="text-[54px] leading-[48px] font-bold text-[#511f50] mb-8">
+          <h1 className="text-[54px] leading-[48px] font-bold mb-8 text-[#511F50]">
             10,000+ of our users love our products.
           </h1>
-          <p className="text-lg text-[#937b92]">
+          <p className="text-lg text-[#937B92]">
             We only provide great products combined with excellent customer
             service. See what our satisfied customers are saying about our
             services.
           </p>
         </div>
 
-        {/* Right side - Ratings */}
-        <div className="space-y-4 pt-4">
+        <div className="space-y-4">
           {[
             { name: "Reviews", offset: "lg:translate-x-0" },
             { name: "Report Guru", offset: "lg:translate-x-[40px]" },
@@ -31,7 +29,7 @@ export default function Social_Proof_Section() {
           ].map((rating) => (
             <div
               key={rating.name}
-              className={`flex flex-row items-center gap-2 bg-[#f7f2f7] rounded-lg py-2 px-8 w-full lg:w-[445px] ${rating.offset}`}
+              className={`flex flex-col sm:flex-row sm:items-center gap-2 bg-[#F7F2F7] rounded-lg px-4 py-4 sm:px-8 w-full lg:w-[445px] ${rating.offset}`}
             >
               <div className="flex gap-2 shrink-0">
                 {Array(5)
@@ -39,11 +37,11 @@ export default function Social_Proof_Section() {
                   .map((_, i) => (
                     <FaStar
                       key={i}
-                      className="w-4 h-4 fill-[#ef9546] text-[#ef9546]"
+                      className="w-4 h-4 fill-[#EF9546] text-[#EF9546]"
                     />
                   ))}
               </div>
-              <p className="font-bold text-lg text-[#511f50]">
+              <p className="font-bold text-lg text-[#511F50]">
                 Rated 5 Stars in {rating.name}
               </p>
             </div>
@@ -51,8 +49,7 @@ export default function Social_Proof_Section() {
         </div>
       </div>
 
-      {/* Testimonials */}
-      <div className="grid gap-8 lg:grid-cols-3 mt-16">
+      <div className="grid gap-6 lg:grid-cols-3 mt-16">
         {[
           {
             name: "David Smith",
@@ -78,28 +75,26 @@ export default function Social_Proof_Section() {
         ].map((testimonial) => (
           <div
             key={testimonial.name}
-            className={`rounded-lg p-10 bg-[#511f50] text-white ${testimonial.offset}`}
+            className={`rounded-lg p-8 bg-[#511F50] text-white ${testimonial.offset}`}
           >
-            <div className="flex items-center gap-5 mb-6">
+            <div className="flex items-center gap-4 mb-6">
               <div className="relative w-12 h-12 rounded-full overflow-hidden">
                 <Image
-                  src={testimonial.image || "/placeholder.svg"}
+                  src={testimonial.image}
                   alt={testimonial.name}
                   fill
                   className="object-cover"
                 />
               </div>
               <div>
-                <p className="font-bold text-base leading-6">
-                  {testimonial.name}
-                </p>
-                <p className="text-base leading-6 text-[#bb6c9f]">
+                <h2 className="font-bold leading-5">{testimonial.name}</h2>
+                <p className="font-medium leading-4 cursor-pointer transition-all text-[#BB6C9F] hover:opacity-80">
                   Verified Buyer
                 </p>
               </div>
             </div>
-            <blockquote className="text-base leading-5 text-[#f7f2f7]">
-              &quot;{testimonial.quote}&quot;
+            <blockquote className="text-lg leading-6 text-[#F7F2F7]">
+              &quot; {testimonial.quote} &quot;
             </blockquote>
           </div>
         ))}
