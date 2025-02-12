@@ -7,7 +7,7 @@ const spartan = League_Spartan({ subsets: ["latin"], weight: ["500"] });
 export default function Social_Proof_Section() {
   return (
     <div
-      className={`${spartan.className} max-w-[1120px] mx-auto px-4 py-20 overflow-hidden`}
+      className={`${spartan.className} max-w-[1120px] mx-auto px-4 py-28 overflow-hidden`}
     >
       <div className="grid gap-y-12 lg:grid-cols-2 lg:gap-x-8 items-center">
         <div className="max-w-[445px]">
