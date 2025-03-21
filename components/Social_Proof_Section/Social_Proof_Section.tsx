@@ -88,7 +88,7 @@ export default function Social_Proof_Section() {
               </div>
               <div>
                 <h2 className="font-bold leading-5">{testimonial.name}</h2>
-                <p className="font-medium leading-4 cursor-pointer transition-all text-[#BB6C9F] hover:opacity-80">
+                <p className="font-medium cursor-pointer text-sm transition-all text-[#BB6C9F] hover:opacity-80">
                   Verified Buyer
                 </p>
               </div>
